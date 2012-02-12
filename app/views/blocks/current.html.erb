@@ -1,0 +1,16 @@
+<h1>Current open blocks:</h1>
+
+<table>
+	<tr>
+		<th>Day</th>
+		<th>Start</th>
+		<th>End</th>
+	<tr>
+<% @blocks.each do |block| %>
+	<tr>
+		<td><%= block.day %></td>
+		<td><%= block.start_time %></td>
+		<td><%= block.end_time %></td>
+	</tr>
+<% end %>
+</table>

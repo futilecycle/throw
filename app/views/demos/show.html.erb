@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @demo.name %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @demo.body %>
+</p>
+
+<p>
+  <b>Rating:</b>
+  <%= @demo.rating %>
+</p>
+
+
+<%= link_to 'Edit', edit_demo_path(@demo) %> |
+<%= link_to 'Back', demos_path %>

@@ -1,5 +1,13 @@
 Throw::Application.routes.draw do
-  root to: "block#index"
+  resources :demos
+
+  root to: "blocks#current"
+  
+  get 'blocks/current'
+  
+  resources :users do
+    resources :blocks
+  end
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

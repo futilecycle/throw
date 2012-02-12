@@ -1,0 +1,23 @@
+<h1>Listing all users</h1>
+
+<p id="notice"><%= notice %></p>
+
+<table>
+	<tr>
+		<th>E-mail</th>
+		<th>Name</th>
+		<th>Phone</th>
+	</tr>
+	<% @users.each do |user| %>
+		<tr>
+			<td><%= user.email %></td>
+			<td><%= user.name %></td>
+			<td><%= user.phone %></td>
+			<td><%= link_to 'Edit', edit_user_path user %></td>
+			<td><%= link_to 'Delete', user, method: :delete %></td>
+		</tr>
+	<% end %>
+</table>
+
+<%= link_to 'New User', new_user_path %>
+<%= link_to 'Back', blocks_current_path %>

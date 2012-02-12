@@ -1,0 +1,19 @@
+<h1>Listing <%= @user.name %>'s blocks:</h2>
+<table>
+	<tr>
+		<th>Day</th>
+		<th>Start</th>
+		<th>End</th>
+	<tr>
+<% @blocks.each do |block| %>
+	<tr>
+		<td><%= block.day %></td>
+		<td><%= block.start_time %></td>
+		<td><%= block.end_time  %></td>
+		<td><%= link_to 'Edit', edit_user_block_path(@user,block) %></td>
+		<td><%= link_to 'Delete', [@user,block], method: :delete %></td>
+	</tr>
+<% end %>
+</table>
+
+<%= link_to 'New block', new_user_block_path(@user) %>

@@ -1,0 +1,21 @@
+<%= form_for [@user, @block] do |f| %>
+	<div>
+		<%= "User: #{@user.name}" %>
+	</div>
+	<div class="day-select">
+		<% days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"] %>
+		<%= f.label :day %>
+		<%= f.select :day, days, %>
+	</div>
+	<div class="time-select">
+		<%= f.label :start_time %>
+		<%= f.time_select :start_time, minute_step: 30 %>
+	</div>
+	<div class="time-field">
+		<%= f.label :end_time %>
+		<%= f.time_select :end_time, minute_step: 30 %>
+	</div>
+	<div class="submit">
+		<%= f.submit %>
+	</div>
+<% end %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120211035207) do
+ActiveRecord::Schema.define(:version => 20120212005237) do
 
   create_table "blocks", :force => true do |t|
     t.time     "start_time"
@@ -19,9 +19,18 @@ ActiveRecord::Schema.define(:version => 20120211035207) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "day"
   end
 
   add_index "blocks", ["user_id"], :name => "index_blocks_on_user_id"
+
+  create_table "demos", :force => true do |t|
+    t.string   "name"
+    t.string   "body"
+    t.integer  "rating"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "username"
