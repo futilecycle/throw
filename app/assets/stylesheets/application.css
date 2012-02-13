@@ -5,3 +5,23 @@
  *= require_self
  *= require_tree . 
 */
+
+h1 {
+	margin:0 auto;
+	padding:10px;
+	
+	font:normal 16pt Arial,Helvetica,sans-serif;
+	background-color:#333;
+	color:#FFF;
+}
+
+#wrap {
+	width:1000px;
+	margin:auto;
+	
+	background-color:#CCC;
+}
+
+table {
+	padding:10px;
+}
