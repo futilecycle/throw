@@ -1,6 +1,4 @@
 Throw::Application.routes.draw do
-  resources :demos
-
   root to: "blocks#current"
   
   get 'blocks/current'

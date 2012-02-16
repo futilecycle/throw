@@ -1,0 +1,22 @@
+$header_font:uppercase "Avant Garde",Verdana,Arial,Helvetica, sans-serif;
+$content_font:normal 12pt Palatino,Garamond,serif;
+
+h1 {
+  margin:0 auto;
+  padding:10px;
+  
+  font:$header_font;
+  background-color:#333;
+  color:#FFF;
+}
+
+#wrap {
+  width:1000px;
+  margin:auto;
+  
+  background-color:#CCC;
+}
+
+table {
+  padding:10px;
+}
